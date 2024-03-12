@@ -1,0 +1,19 @@
+name: GitHub Secrets
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:  
+      - name: Print Secret
+        run: |
+            echo "APP_SECRET: ${{ secrets.APP_SECRET  }}"
+            echo "No_secret: ${{ secrets.No_secret  }}"
+            
+      - name: Print Secret as an environment variable
+        run: |
+            echo "APP_SECRET: $USE_SECRET"
+        env:
+            USE_SECRET: ${{ secrets.APP_SECRET }}

@@ -34,3 +34,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+       # Runs a multeple commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo build
+          echo test
+          echo store
+          echo configure
+          echo deploy
+          echo validate

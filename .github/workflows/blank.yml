@@ -46,6 +46,7 @@ jobs:
           echo validate
 
   build-api:
+    needs: [build]
     runs-on: windows-latest
     steps:
         - run: echo "Building API" 

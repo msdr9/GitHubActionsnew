@@ -36,7 +36,7 @@ jobs:
           echo test, and deploy your project.
           
        # Runs a multeple commands using the runners shell
-      - name: Run a multi-line script
+      - name: Run a multiple-line script
         run: |
           echo build
           echo test
@@ -44,3 +44,8 @@ jobs:
           echo configure
           echo deploy
           echo validate
+
+  build-api:
+    runs-on: windows-latest
+    steps:
+        - run: echo "Building API" 
